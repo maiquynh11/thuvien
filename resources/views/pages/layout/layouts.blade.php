@@ -103,12 +103,14 @@
         $(this).remove(); 
     });
 }, 3000);
-
+</script>
+<script>
 $('#deleteModal').on('show.bs.modal', function(event){
-                var button = $(event.relatedTarget)
-                var user_id = button.data('userid')
-                var modal = $(this);
-                modal.find('.modal-body #user_id').val(user_id);
+  var button = $(event.relatedTarget)
+  var user_id = button.data('userid')
+  var modal = $(this);
+  modal.find('.modal-body #user_id').val(user_id);
+)}
 </script>
   @yield('script')
 </body>

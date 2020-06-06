@@ -31,7 +31,7 @@
             <a href="#" class="nav-link">
             <img src="{{Auth::user()->avatar}}" class="img-circle elevation-2" width="50px" alt="User Image">
               <p>
-              {{Auth::user()->name}}
+              {{Auth::user()->hoten}}
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -172,77 +172,41 @@
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href={{route('permissions.index')}} class="nav-link {{Request::is('permissions') ? 'active' : '' }}">
               <i class="nav-icon fas fa-tree"></i>
               <p>
-                UI Elements
+                Permissions
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/UI/general.html" class="nav-link">
+                <a href="{{route('permissions.index')}}" class="nav-link {{Request::is('permissions/index') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>General</p>
+                  <p>List Permissions</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/UI/icons.html" class="nav-link">
+                <a href="{{route('permissions.create')}}" class="nav-link {{Request::is('permissions/create') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Icons</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/buttons.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Buttons</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/sliders.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Sliders</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/modals.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Modals & Alerts</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/navbar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Navbar & Tabs</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/timeline.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Timeline</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/ribbons.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ribbons</p>
+                  <p>Create Permissions</p>
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href={{route('loaisachs.index')}} class="nav-link {{Request::is('loaisachs') ? 'active' : '' }}">
               <i class="nav-icon fas fa-edit"></i>
               <p>
-                Forms
+                Loại sách
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
+                <a href="{{route('loaisachs.index')}}" class="nav-link {{Request::is('loaisachs/index') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>General Elements</p>
+                  <p>Danh sách loại sách</p>
                 </a>
               </li>
               <li class="nav-item">

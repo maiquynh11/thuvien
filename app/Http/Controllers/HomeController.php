@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Auth;
 use Spatie\Permission\Models\Role;
 use Validator;
+use Hash;
 class HomeController extends Controller
 {
     /**
@@ -41,13 +42,13 @@ class HomeController extends Controller
     {
         $profile= User::find(Auth::user()->id);
         $this->validate($request,[
-            'username'=>'required',
+            'hoten'=>'required',
             'email'=>'required',
-            'danhso'=>'required',
+            'mathuthu'=>'required',
         ]);
-        $profile->username=$request->input('username');
+        $profile->username=$request->input('hoten');
         $profile->email=$request->input('email');
-        $profile->danhso=$request->input('danhso');
+        $profile->mathuthu=$request->input('mathuthu');
         if(!empty($request->input('password')))
         {
             $profile->password=Hash::make($request->input('password'));

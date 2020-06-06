@@ -7,9 +7,16 @@ use Illuminate\Http\Request;
 
 class permissionController extends Controller
 {
+    // function __construct()
+    // {
+    //      $this->middleware('permission:role-list|role-create|role-edit|role-delete', ['only' => ['index','store']]);
+    //      $this->middleware('permission:role-create', ['only' => ['create','store']]);
+    //      $this->middleware('permission:role-edit', ['only' => ['edit','update']]);
+    //      $this->middleware('permission:role-delete', ['only' => ['destroy']]);
+    // }
     public function index(Request $request)
     {
-        $permissions= Permission::orderBy('id','DESC')->paginate(5);
+        $permissions= Permission::orderBy('id','ASC')->paginate(5);
         return view('permissions.index',compact('permissions'))
         ->with('i',($request->input('page', 1) - 1) * 5);
     }
@@ -49,5 +56,18 @@ class permissionController extends Controller
         $permissions->update($input);
         return redirect()->route('permissions.index')
         ->with('success','Permission updated successfully');
+    }
+
+    public function show($id)
+    {
+        $permissions = Permission::find($id);
+        return view('permissions.show',compact('permissions'));
+    }
+    public function destroy($id)
+    {
+
+        Permission::find($id)->delete();
+        return redirect()->route('permissions.index')
+        ->with('success','permission deleted successfully');
     }
 }

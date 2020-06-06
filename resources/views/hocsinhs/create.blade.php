@@ -5,13 +5,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Create User Form</h1>
+            <h1>Tạo độc giả</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{route('users.index')}}">Home</a></li>
-              <li class="breadcrumb-item active"><a href="{{route('users.index')}}">User</a> </li>
-              <li class="breadcrumb-item active">Create User Form</li>
+              <li class="breadcrumb-item"><a href="{{route('books.index')}}">Home</a></li>
+              <li class="breadcrumb-item active"><a href="{{route('books.index')}}">Độc giả</a> </li>
+              <li class="breadcrumb-item active">Create</li>
             </ol>
           </div>
         </div>
@@ -40,37 +40,28 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" action="{{route('users.store')}}" method="post" enctype="multipart/form-data">
+              <form role="form" action="{{route('books.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                  <div class="form-group">
-                    <label for="exampleName">User Name</label>
-                    <input type="text" class="form-control" id="hoten" placeholder="name" name="hoten" value="{{old('hoten')}}">
+                    <label for="exampleName">Mã học sinh</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter book name" name="name" value="{{old('name')}}">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
+                    <label for="exampleInputEmail1">Tên học sinh</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="email" value="{{old('email')}}">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+                    <label for="exampleDanhso">Giới tính</label>
+                    <input type="text" class="form-control" id="phonenumber" placeholder="Enter phone number" name="phonenumber" value="{{old('phonenumber')}}">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Confirm Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="confirmPassword" name="confirm-password">
+                    <label for="exampleNgaysinh">Ngày sinh</label>
+                    <input type="text" class="form-control" id="ngaysinh" placeholder="Enter ngày sinh" name="ngaysinh" value="{{old('ngaysinh')}}">
                   </div>
                   <div class="form-group">
-                    <label for="exampleDanhso">Mã thủ thư</label>
-                    <input type="text" class="form-control" id="mathuthu" placeholder="" name="mathuthu" value="{{old('mathuthu')}}">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputFile">Input avatar</label>
-                        <input type="file" class="form-control" name="avatar" value="{{old('avatar')}}">
-                      
-                  </div>
-                  <div class="form-group">
-                    <strong>Role:</strong>
-                    {!! Form::select('roles[]', $roles,[], array('class' => 'form-control','multiple')) !!}
+                    <label for="exampleInputGioitinh">Mã lớp</label>
+                    <input type="text" class="form-control" id="gioitinh" placeholder="Enter giới tính" name="gioitinh" value="{{old('gioitinh')}}">
                   </div>
                 <!-- /.card-body -->
 

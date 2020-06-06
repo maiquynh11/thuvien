@@ -17,13 +17,13 @@ class usercontroller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    function __construct()
-    {
-         $this->middleware('permission:product-list|product-create|product-edit|product-delete', ['only' => ['index','show']]);
-         $this->middleware('permission:product-create', ['only' => ['create','store']]);
-         $this->middleware('permission:product-edit', ['only' => ['edit','update']]);
-         $this->middleware('permission:product-delete', ['only' => ['destroy']]);
-    }
+    // function __construct()
+    // {
+    //      $this->middleware('permission:user-list|user-create|user-edit|user-delete', ['only' => ['index','show']]);
+    //      $this->middleware('permission:user-create', ['only' => ['create','store']]);
+    //      $this->middleware('permission:user-edit', ['only' => ['edit','update']]);
+    //      $this->middleware('permission:user-delete', ['only' => ['destroy']]);
+    // }
 
     public function index(Request $request)
     {
@@ -53,7 +53,7 @@ class usercontroller extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required',
+            'hoten' => 'required',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|same:confirm-password',
             // 'roles' => 'required'
@@ -137,7 +137,7 @@ class usercontroller extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'name' => 'required',
+            'hoten' => 'required',
             'email' => 'required|email|unique:users,email,'.$id, //tranh bi trung thong tin khi cap nhat
             'password' => 'same:confirm-password',
             // 'roles' => 'required'

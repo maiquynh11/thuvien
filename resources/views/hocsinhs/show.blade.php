@@ -5,13 +5,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Show User</h1>
+            <h1>THÔNG TIN ĐẦU SÁCH</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active"><a href="{{route('users.index')}}">User</a> </li>
-              <li class="breadcrumb-item active">User {{$user->hoten}}</li>
+              <li class="breadcrumb-item active"><a href="{{route('dausachs.index')}}">Đầu sách</a> </li>
+              <li class="breadcrumb-item active">Thông tin đầu sách{{$dausach->tensach}}</li>
             </ol>
           </div>
         </div>
@@ -39,39 +39,52 @@
               <!-- /.card-header -->
               <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Name:</strong>
-                        {{ $user->hoten }}
+                        <strong>Mã sách:</strong>
+                        {{ $dausach->masach}}
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Email:</strong>
-                        {{ $user->email }}
+                        <strong>Tên sách:</strong>
+                        {{ $dausach->tensach}}
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Mã thủ thư</strong>
-                        {{ $user->mathuthu }}
+                        <strong>Tác giả</strong>
+                        {{ $dausach->tacgia }}
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Avatar</strong>
-                        <img src="{{$user->avatar}}" width="150px" class="img-circle">
+                        <strong>Mã loại</strong>
+                        {{ $dausach->maloai }}
                     </div>
                 </div>
-              
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Roles:</strong>
-                        @if(!empty($user->getRoleNames()))
-                            @foreach($user->getRoleNames() as $v)
-                                <label class="badge badge-success">{{ $v }}</label>
-                            @endforeach
-                        @endif
+                        <strong>Nhà xuất bản</strong>
+                        {{$dausach->nhaxuatban}}"
                     </div>
                 </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="form-group">
+                      <strong>Năm xuất bản</strong>
+                      {{ $dausach->namxuatban }}
+                  </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="form-group">
+                      <strong>Số lượng</strong>
+                      {{$dausach->soluong}}"
+                  </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="form-group">
+                      <strong>Ngôn ngữ</strong>
+                      {{$dausach->ngonngu}}"
+                  </div>
+              </div>
               <!-- form start -->
             </div>
             <!-- /.card -->

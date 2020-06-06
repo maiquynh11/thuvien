@@ -34,7 +34,7 @@
                   @endif
                 </div>
 
-                <h3 class="profile-name text-center"> {{ $profile->name }}</h3>
+                <h3 class="profile-name text-center"> {{ $profile->hoten }}</h3>
               </div>
               <!-- /.card-body -->
             </div>
@@ -47,7 +47,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <strong><i class="fas fa-book mr-1">{{$profile->danhso}}</i></strong>
+                <strong><i class="fas fa-book mr-1">{{$profile->mathuthu}}</i></strong>
               <!-- Phone number -->
                 <p class="text-muted">
                   
@@ -106,7 +106,7 @@
 
                      <div class="form-group">
                         <label for="exampleName">User Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="name" name="name" value="{{$profile->name}}"readonly="">
+                        <input type="text" class="form-control" id="hoten" placeholder="name" name="hoten" value="{{$profile->hoten}}"readonly="">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
@@ -121,12 +121,8 @@
                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="confirmPassword" name="confirm-password">
                       </div>
                       <div class="form-group">
-                        <label for="exampleDanhso">Danh số</label>
-                        <input type="text" class="form-control" id="danhso" placeholder="" name="danhso" value="{{$profile->danhso}}">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleTen">Họ tên</label>
-                        <input type="text" class="form-control" id="hoten" placeholder="" name="hoten" value="{{$profile->hoten}}">
+                        <label for="exampleDanhso">Mã thủ thư</label>
+                        <input type="text" class="form-control" id="mathuthu" placeholder="" name="mathuthu" value="{{$profile->mathuthu}}">
                       </div>
                       <div class="form-group">
                         <strong>Role:</strong>

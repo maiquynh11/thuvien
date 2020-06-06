@@ -27,6 +27,10 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles','RoleController');
     Route::resource('users','usercontroller');
     Route::resource('permissions','permissionController');
+    Route::resource('dausachs','DausachController');
+     Route::resource('loaisachs','LoaisachController');
+
+
 });
 route::get('profile','HomeController@profile')->name('profile');
 route::post('profile-update','HomeController@profileUpdate')->name('profile-update');
