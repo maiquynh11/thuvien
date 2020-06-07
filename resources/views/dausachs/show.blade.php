@@ -57,6 +57,12 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
+                        <strong>Tên loại:</strong>
+                        {{ $dausach->loaisach->tenloai }}
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
                         <strong>Nhà xuất bản:</strong>
                         {{ $dausach->nhaxuatban}}
                     </div>
@@ -64,7 +70,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Năm xuất bản:</strong>
-                        {{$dausach->namxuatban}}"
+                        {{$dausach->namxuatban}}
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -76,7 +82,7 @@
               <div class="col-xs-12 col-sm-12 col-md-12">
                   <div class="form-group">
                       <strong>Ngôn ngữ:</strong>
-                      {{$dausach->ngonngu}}"
+                      {{$dausach->ngonngu}}
                   </div>
               </div>                   
               <!-- form start -->

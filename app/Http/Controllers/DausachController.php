@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Dausach;
+use App\Loaisach;
 use DB;
 
 class DausachController extends Controller
@@ -17,7 +18,8 @@ class DausachController extends Controller
     public function create()
     { 
         $dausachs = DB::table('dausach')->get();
-        return view('dausachs.create', compact('dausachs'));
+        $loaisachs = DB::table('loaisach')->get();
+        return view('dausachs.create', compact('dausachs', 'loaisachs'));
     }
     public function store(Request $request)
     {
@@ -37,7 +39,8 @@ class DausachController extends Controller
     public function edit($id)
     {
         $dausach = Dausach::find($id); 
-        return view('dausachs.edit',compact('dausach'));
+        $loaisachs = Loaisach::find($id);
+        return view('dausachs.edit',compact('dausach', 'loaisachs'));
     }
      public function update(Request $request, $id)
     {

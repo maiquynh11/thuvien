@@ -29,8 +29,14 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <style>
-    label{
-      color:black;
+    label {
+      color: black;
+    }
+    .main-sidebar {
+     background: #00695c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #00695c, #003d33);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #00695c, #003d33); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     }
     </style>
 </head>
@@ -45,7 +51,7 @@
     @include('pages.patials.menu')
 
       <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper">
+      <div class="content-wrapper" style="background-color: #dcedc8;">
           @yield('content')
       </div>
       <!-- /.content-wrapper -->
@@ -91,7 +97,7 @@
   <!-- AdminLTE App -->
   <script src="AdminLTE-master/dist/js/adminlte.js"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-  <script src="AdminLTE-master/dist/js/pages/dashboard.js"></script>
+  <!-- <script src="AdminLTE-master/dist/js/pages/dashboard.js"></script> -->
   <!-- AdminLTE for demo purposes -->
   <script src="AdminLTE-master/dist/js/demo.js"></script>
   

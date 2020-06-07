@@ -56,9 +56,9 @@
                     <input type="text" class="form-control" id="tacgia" placeholder="Tác giả" name="tacgia" value="{{old('tacgia')}}">
                   </div>
                   <div class="form-group">
-                    <strong>Mã loại</strong>
+                    <label for="exampleInputEmail1">Tên loại</label>
                     <select name="maloai" class="browser-default custom-select">
-                      @foreach ($loaisach as $value)
+                      @foreach ($loaisachs as $value)
                         <option value="{{$value->maloai}}"> {{$value->tenloai}}</option>
                       @endforeach
                     </select>

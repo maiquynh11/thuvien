@@ -51,11 +51,11 @@
                       <th>Mã Sách</th>
                       <th>Tên Sách</th>
                       <th>Tác Giả</th>
+                      <th>Tên loại</th>
                       <th>Nhà Xuất Bản</th>
                       <th>Năm Xuất Bản</th>
                       <th>Số Lượng</th>
-                      <th>Ngôn Ngữ</th>
-                      
+                      <th>Ngôn Ngữ</th>    
                       <th>Thao Tác</th>
                     </tr>
                   </thead>

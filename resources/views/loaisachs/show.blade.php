@@ -39,14 +39,14 @@
               <!-- /.card-header -->
               <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Mã loại</strong>
+                        <strong>Mã loại:</strong>
                         {{ $loaisach->maloai}}
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Tên loại sách</strong>
-                        {{ $loaisach->tenloaisach}}
+                        <strong>Tên loại sách:</strong>
+                        {{ $loaisach->tenloai}}
                     </div>
                 </div>               
               <!-- form start -->

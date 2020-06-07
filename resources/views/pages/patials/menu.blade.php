@@ -1,11 +1,8 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4" style="      background: rgba(0,0,0, .82);">
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background: re">
     <!-- Brand Logo -->
-    <a href="{{route('homepage')}}" class="brand-link" style="background-color:#212121">
-      <img src="\Datlichkham\public\logo\logohospital.PNG" alt="AdminLTE Logo" width="120px" height="65px"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light"></span>
+    <a href="{{route('homepage')}}" class="brand-link" style="background-color: #00251a">
+      <img src="" >THƯ VIỆN TRƯỜNG HỌC
     </a>
-
     <!-- Sidebar -->
     <div class="sidebar">
       @if(Auth::check())
@@ -22,30 +19,34 @@
             </li>
           </ul>
         </div>
-        
-        
       </div> -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-            <img src="{{Auth::user()->avatar}}" class="img-circle elevation-2" width="50px" alt="User Image">
-              <p>
-              {{Auth::user()->hoten}}
-                <i class="fas fa-angle-left right"></i>
-              </p>
+              <div class="row">
+                <div class="col-3">
+                    <img src="{{Auth::user()->avatar}}" class="img-circle elevation-2 mr-3" width="40px" height="40px"alt="User Image">
+                      
+                </div>
+                <div class="col-9">
+                  <b>{{Auth::user()->hoten}}</b>
+                  <br>
+                  <p style="font-size: 13px; color: ; ">{{Auth::user()->email}}</p>
+                </div>
+              </div>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{route('profile')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                  <p>Profile</p>
+                  <p>Thông tin</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="logout" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Logout</p>
+                  <p>Đăng xuất</p>
                 </a>
               </li>
             
@@ -126,9 +127,7 @@
           <li class="nav-item has-treeview {{Request::is('users*') || Request::is('/') ? 'menu-open' : '' }} ">
             <a href="#" class="nav-link {{Request::is('users*') || Request::is('/') ? 'active' : '' }}">
               <i class="nav-icon fas fa-user"></i>
-              <p>
-                User
-                <i class="right fas fa-angle-left"></i>
+              <p>Quản lý người dùng<i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -151,7 +150,7 @@
             <a href="#" class="nav-link {{Request::is('roles*') ? 'active' : '' }}">
               <i class="nav-icon fas fa-tree"></i>
               <p>
-                Roles
+                Phân quyền
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -175,7 +174,7 @@
             <a href={{route('permissions.index')}} class="nav-link {{Request::is('permissions') ? 'active' : '' }}">
               <i class="nav-icon fas fa-tree"></i>
               <p>
-                Permissions
+                Quyền
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -196,23 +195,20 @@
           </li>
           <li class="nav-item has-treeview">
             <a href={{route('loaisachs.index')}} class="nav-link {{Request::is('loaisachs') ? 'active' : '' }}">
-              <i class="nav-icon fas fa-edit"></i>
-              <p>
-                Loại sách
-                <i class="fas fa-angle-left right"></i>
-              </p>
+              <i class="nav-icon fas fa-book"></i>
+              <p>Quản lý sách<i class="fas fa-angle-left right"></i></p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('loaisachs.index')}}" class="nav-link {{Request::is('loaisachs/index') ? 'active' : '' }}">
+                <a href="{{route('loaisachs.index')}}" class="nav-link {{Request::is('loaisachs') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Danh sách loại sách</p>
+                  <p>Loại sách</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
+                <a href="{{route('dausachs.index')}}" class="nav-link {{Request::is('dausachs') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Advanced Elements</p>
+                  <p>Đầu sách</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -231,9 +227,9 @@
           </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
+              <i class="fas fa-book-reader nav-icon"></i>
               <p>
-                Tables
+                Quản lý độc giả
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -254,6 +250,35 @@
                 <a href="pages/tables/jsgrid.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>jsGrid</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+           <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-address-book"></i>
+              <p>
+                Quản lý mượn - trả
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/tables/simple.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Quản lý mượn sách</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Quản lý trả sách</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Thống kê</p>
                 </a>
               </li>
             </ul>
@@ -465,7 +490,7 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-circle"></i>
               <p>
-                Level 1
+                Quản trị hệ tho
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
