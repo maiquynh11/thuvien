@@ -9,6 +9,6 @@ class Lop extends Model
     protected $table = 'lop';
     protected $fillable = ['malop', 'tenlop'];
     public function hocsinh() {
-        return $this->hasMany('App\lop', 'malop', 'malop');
+        return $this->hasMany('App\hocsinh', 'malop', 'malop');
     }
 }

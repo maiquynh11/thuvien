@@ -5,14 +5,14 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-8" >
-            <h1>BẢNG ĐỘC GIẢ</h1>
+            <h1>DANH SÁCH ĐỘC GIẢ</h1>
           </div>
           <div class="col-sm-2">
-            <a class="btn btn-success" href="{{ route('books.create') }}">Tạo độc giả</a>
+            <a class="btn btn-success" href="{{ route('hocsinhs.create') }}">Thêm độc giả</a>
           </div>
           <div class="col-sm-2">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{route('books.index')}}">Home</a></li>
+              <li class="breadcrumb-item"><a href="{{route('hocsinhs.index')}}">Trang chủ</a></li>
               <li class="breadcrumb-item active">Độc giả</li>
             </ol>
           </div>
@@ -28,9 +28,8 @@
     <div class="row" style="background-color:#dcedc8">
           <div class="col-12">
             <div class="card">
-              <div class="card-header">
+              <!-- <div class="card-header">
                 <h3 class="card-title"></h3>
-
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;" style="background-color:#e0e0e0">
                     <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
@@ -41,7 +40,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
                 <table class="table table-hover text-nowrap">
@@ -63,7 +62,7 @@
                       <td>{{$hocsinh->mahocsinh}}</td>
                       <td>{{$hocsinh->tenhocsinh}}</td>
                       <td>{{$hocsinh->gioitinh}}</td>
-                      <td>{{$hocsinh->ngaysinh}</td>
+                      <td>{{$hocsinh->ngaysinh}}</td>
                       <td>{{$hocsinh->malop}}</td>
                       <td>
                         <a class="btn btn-info" href="{{ route('hocsinhs.show',$hocsinh->id) }}">Show</a>

@@ -42,19 +42,19 @@
                 @csrf
                 <div class="card-body">
                  <div class="form-group">
-                    <label for="exampleName">User Name</label>
+                    <label for="exampleName">Tên thủ thư</label>
                     <input type="text" class="form-control" id="hoten" placeholder="name" name="hoten" value="{{$user->hoten}}">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
+                    <label for="exampleInputEmail1">Email</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="email" value="{{$user->email}}">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
+                    <label for="exampleInputPassword1">Mật khẩu</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Confirm Password</label>
+                    <label for="exampleInputPassword1">Nhập lại mật khẩu</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="confirmPassword" name="confirm-password">
                   </div>
                   <div class="form-group">

@@ -28,12 +28,18 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('users','usercontroller');
     Route::resource('permissions','permissionController');
     Route::resource('dausachs','DausachController');
-     Route::resource('loaisachs','LoaisachController');
+    Route::resource('loaisachs','LoaisachController');
+    Route::resource('lops', 'LopController');
+    Route::resource('hocsinhs', 'HocsinhController');
+    Route::resource('muonsachs', 'MuonsachController');
+    Route::resource('thongkes', 'ThongkeController');
 
 
 });
 route::get('profile','HomeController@profile')->name('profile');
 route::post('profile-update','HomeController@profileUpdate')->name('profile-update');
+Route::get('/search', 'HomeController@search');
+Route::post('/search', 'HomeController@searchFullText')->name('search');
 
 
 // route::get('register',function(){

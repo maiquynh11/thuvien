@@ -12,7 +12,7 @@
           </div>
           <div class="col-sm-2">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{route('dausachs.index')}}">Home</a></li>
+              <li class="breadcrumb-item"><a href="{{route('dausachs.index')}}">Trang chủ</a></li>
               <li class="breadcrumb-item active">Bảng đầu sách</li>
             </ol>
           </div>
@@ -28,9 +28,8 @@
     <div class="row" style="background-color:#dcedc8">
           <div class="col-12">
             <div class="card">
-              <div class="card-header">
+              <!-- <div class="card-header">
                 <h3 class="card-title"></h3>
-
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;" style="background-color:#e0e0e0">
                     <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
@@ -41,7 +40,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
                 <table class="table table-hover text-nowrap">
@@ -79,6 +78,7 @@
                             {!! Form::close() !!}
                       </td>
                     </tr>
+                    
                     @endforeach
                   </tbody>
                 </table>
@@ -87,6 +87,7 @@
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
+            <div class="">Tổng số lượng:{{$dausach_count}}</div>
           </div>
     </div>
 

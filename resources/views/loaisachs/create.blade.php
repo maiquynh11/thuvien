@@ -9,7 +9,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{route('loaisachs.index')}}">Home</a></li>
+              <li class="breadcrumb-item"><a href="{{route('loaisachs.index')}}">Trang chủ</a></li>
               <li class="breadcrumb-item active"><a href="{{route('loaisachs.index')}}">Loại sách</a> </li>
               <li class="breadcrumb-item active">Tạo loại sách</li>
             </ol>
@@ -27,7 +27,7 @@
     </ul>
   </div>
 @endif
-    <section class="content"   style="background-color:#dcedc8">
+    <section class="content" style="background-color:#dcedc8">
       <div class="container-fluid">
       <div class="row">
       <div class="col-md-12">
@@ -54,7 +54,7 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Tạo</button>
                 </div>
               </form>
             </div>

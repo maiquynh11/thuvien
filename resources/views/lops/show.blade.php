@@ -5,13 +5,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Show User</h1>
+            <h1>THÔNG TIN LỚP</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active"><a href="{{route('users.index')}}">User</a> </li>
-              <li class="breadcrumb-item active">User {{$user->hoten}}</li>
+              <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+              <li class="breadcrumb-item active"><a href="{{route('lops.index')}}">Lớp</a> </li>
+              <li class="breadcrumb-item active">Thông tin lớp {{$lops->tenlop}}</li>
             </ol>
           </div>
         </div>
@@ -39,37 +39,14 @@
               <!-- /.card-header -->
               <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Name:</strong>
-                        {{ $user->hoten }}
+                        <strong>Mã lớp:</strong>
+                        {{ $lops->malop}}
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Email:</strong>
-                        {{ $user->email }}
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Mã thủ thư</strong>
-                        {{ $user->mathuthu }}
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Avatar</strong>
-                        <img src="{{$user->avatar}}" width="150px" class="img-circle">
-                    </div>
-                </div>
-              
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Roles:</strong>
-                        @if(!empty($user->getRoleNames()))
-                            @foreach($user->getRoleNames() as $v)
-                                <label class="badge badge-success">{{ $v }}</label>
-                            @endforeach
-                        @endif
+                        <strong>Tên lớp:</strong>
+                        {{ $lops->tenlop }}
                     </div>
                 </div>
               <!-- form start -->

@@ -27,6 +27,7 @@ class usercontroller extends Controller
 
     public function index(Request $request)
     {
+        $soluong_count = user::count();
         $data = User::orderBy('id','ASC')->paginate(5); //phan trang: 5sp tren mot trang
         return view('users.index',compact('data'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
@@ -201,4 +202,5 @@ class usercontroller extends Controller
         return redirect()->route('users.index')
                         ->with('success','User deleted successfully');
     }
+    
 }

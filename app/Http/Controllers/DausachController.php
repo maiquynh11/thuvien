@@ -9,10 +9,11 @@ use DB;
 
 class DausachController extends Controller
 {
-     public function index(Request $request)
+    public function index(Request $request)
     { 
-        $dausachs = Dausach::orderBy('id','DESC')->paginate(10);
-        return view('dausachs.index',compact('dausachs'))
+        $dausach_count = Dausach::count('id');
+        $dausachs = Dausach::orderBy('tensach','ASC')->paginate(10);
+        return view('dausachs.index',compact('dausachs', 'dausach_count'))
             ->with('i', ($request->input('page', 1) - 1) * 10);
     }
     public function create()
@@ -29,34 +30,37 @@ class DausachController extends Controller
         $input = $request->all();
         $dausachs = Dausach::create($input);
         return redirect()->route('dausachs.index')
-                        ->with('success','Thêm thành công loại sách');
+                        ->with('success','Thêm thành công đầu sách');
     }
      public function show($id)
     {
-        $dausach = Dausach::find($id);
-        return view('dausachs.show',compact('dausach'));
+        $dausachs = Dausach::find($id);
+        return view('dausachs.show',compact('dausachs'));
     }
     public function edit($id)
     {
-        $dausach = Dausach::find($id); 
-        $loaisachs = Loaisach::find($id);
-        return view('dausachs.edit',compact('dausach', 'loaisachs'));
+        $dausachs = Dausach::find($id); 
+        $loaisachs = DB::table('loaisach')->get();
+        return view('dausachs.edit',compact('dausachs', 'loaisachs'));
     }
      public function update(Request $request, $id)
     {
         $this->validate($request, [
             'masach' => 'required',
         ]);
-        $dausach = Dausach::find($id);
-        $dausach->update($request->all());
-        $dausach->save();
+        $dausachs = Dausach::find($id);
+        $dausachs->update($request->all());
+        $dausachs->save();
         return redirect()->route('dausachs.index')
-                        ->with('success','Đã cập nhật thành công loại sách');
+                        ->with('success','Đã cập nhật thành công đầu sách');
     }
     public function destroy($id)
     {
         Dausach::find($id)->delete();
         return redirect()->route('dausachs.index')
                         ->with('success','Xóa thành công loại sách');
+    }
+    public function search() {
+
     }
 }

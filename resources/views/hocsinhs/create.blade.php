@@ -5,13 +5,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Tạo độc giả</h1>
+            <h1>THÊM ĐỘC GIẢ</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{route('books.index')}}">Home</a></li>
-              <li class="breadcrumb-item active"><a href="{{route('books.index')}}">Độc giả</a> </li>
-              <li class="breadcrumb-item active">Create</li>
+              <li class="breadcrumb-item"><a href="{{route('hocsinhs.index')}}">Home</a></li>
+              <li class="breadcrumb-item active"><a href="{{route('hocsinhs.index')}}">Độc giả</a> </li>
+              <li class="breadcrumb-item active">Thêm</li>
             </ol>
           </div>
         </div>
@@ -40,33 +40,37 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" action="{{route('books.store')}}" method="post" enctype="multipart/form-data">
+              <form role="form" action="{{route('hocsinhs.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                  <div class="form-group">
                     <label for="exampleName">Mã học sinh</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter book name" name="name" value="{{old('name')}}">
+                    <input type="text" class="form-control" id="mahocsinh" placeholder="Mã học sinh" name="mahocsinh" value="{{old('mahocsinh')}}">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Tên học sinh</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="email" value="{{old('email')}}">
+                    <input type="text" class="form-control" id="tenhocsinh" placeholder="Tên học sinh" name="tenhocsinh" value="{{old('tenhocsinh')}}">
                   </div>
                   <div class="form-group">
                     <label for="exampleDanhso">Giới tính</label>
-                    <input type="text" class="form-control" id="phonenumber" placeholder="Enter phone number" name="phonenumber" value="{{old('phonenumber')}}">
+                    <input type="text" class="form-control" id="gioitinh" placeholder="Giới tính" name="gioitinh" value="{{old('gioitinh')}}">
                   </div>
                   <div class="form-group">
                     <label for="exampleNgaysinh">Ngày sinh</label>
-                    <input type="text" class="form-control" id="ngaysinh" placeholder="Enter ngày sinh" name="ngaysinh" value="{{old('ngaysinh')}}">
+                    <input type="text" class="form-control" id="ngaysinh" placeholder="Ngày sinh" name="ngaysinh" value="{{old('ngaysinh')}}">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputGioitinh">Mã lớp</label>
-                    <input type="text" class="form-control" id="gioitinh" placeholder="Enter giới tính" name="gioitinh" value="{{old('gioitinh')}}">
+                    <label for="exampleInputEmail1">Tên lớp</label>
+                    <select name="malop" class="browser-default custom-select">
+                      @foreach ($lops as $value)
+                        <option value="{{$value->malop}}"> {{$value->tenlop}}</option>
+                      @endforeach
+                    </select>
                   </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Thêm</button>
                 </div>
               </form>
             </div>

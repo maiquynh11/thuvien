@@ -21,14 +21,22 @@ class LoaisachController extends Controller
     {
         $this->validate($request, [
             'maloai' => 'required',
+            
             'tenloai' => 'required',
+        ],
+        [
+            'required' => ':attribute không được bỏ trống',          
+        ],
+        [
+            'maloai' => 'Mã loại',
+            'tenloai' => 'Tên loại',
         ]);
         $input = $request->all();
         $loaisachs = Loaisach::create($input);
         return redirect()->route('loaisachs.index')
                         ->with('success','Thêm thành công loại sách');
     }
-     public function show($id)
+    public function show($id)
     {
         $loaisach = Loaisach::find($id);
         return view('loaisachs.show',compact('loaisach'));

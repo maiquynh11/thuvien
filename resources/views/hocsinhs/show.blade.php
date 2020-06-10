@@ -5,13 +5,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>THÔNG TIN ĐẦU SÁCH</h1>
+            <h1>THÔNG TIN ĐỘC GIẢ</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active"><a href="{{route('dausachs.index')}}">Đầu sách</a> </li>
-              <li class="breadcrumb-item active">Thông tin đầu sách{{$dausach->tensach}}</li>
+              <li class="breadcrumb-item active"><a href="{{route('hocsinhs.index')}}">Độc giả</a> </li>
+              <li class="breadcrumb-item active">Thông tin độc gỉa{{$hocsinhs->tensach}}</li>
             </ol>
           </div>
         </div>
@@ -39,52 +39,34 @@
               <!-- /.card-header -->
               <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Mã sách:</strong>
-                        {{ $dausach->masach}}
+                        <strong>Mã học sinh:</strong>
+                        {{ $hocsinhs->mahocsinh}}
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Tên sách:</strong>
-                        {{ $dausach->tensach}}
+                        <strong>Tên học sinh:</strong>
+                        {{ $hocsinhs->tenhocsinh}}
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Tác giả</strong>
-                        {{ $dausach->tacgia }}
+                        <strong>Giới tính:</strong>
+                        {{ $hocsinhs->gioitinh}}
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Mã loại</strong>
-                        {{ $dausach->maloai }}
+                        <strong>Ngày sinh:</strong>
+                        {{ $hocsinhs->ngaysinh }}
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Nhà xuất bản</strong>
-                        {{$dausach->nhaxuatban}}"
+                        <strong>Tên lớp:</strong>
+                        {{$hocsinhs->lop->tenlop}}
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                      <strong>Năm xuất bản</strong>
-                      {{ $dausach->namxuatban }}
-                  </div>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                      <strong>Số lượng</strong>
-                      {{$dausach->soluong}}"
-                  </div>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                      <strong>Ngôn ngữ</strong>
-                      {{$dausach->ngonngu}}"
-                  </div>
-              </div>
+                </div>     
               <!-- form start -->
             </div>
             <!-- /.card -->

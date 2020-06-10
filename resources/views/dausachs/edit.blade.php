@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Edit User: {{$dausach->tensach}}</h1>
+            <h1>Edit User: {{$dausachs->tensach}}</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -38,20 +38,20 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              {!! Form::model($dausach, ['method' => 'PATCH','route' => ['dausachs.update', $dausach->id], 'files'=>true]) !!}
+              {!! Form::model($dausachs, ['method' => 'PATCH','route' => ['dausachs.update', $dausachs->id], 'files'=>true]) !!}
                 @csrf
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleMa">Mã Sách</label>
-                    <input type="text" class="form-control" id="masach" placeholder="Mã Sách" name="masach" value="{{$dausach->masach}}">
+                    <input type="text" class="form-control" id="masach" placeholder="Mã Sách" name="masach" value="{{$dausachs->masach}}">
                   </div>
                  <div class="form-group">
                     <label for="exampleName">Tên Sách</label>
-                    <input type="text" class="form-control" id="tensach" placeholder="Tên Sách" name="tensach" value="{{$dausach->tensach}}">
+                    <input type="text" class="form-control" id="tensach" placeholder="Tên Sách" name="tensach" value="{{$dausachs->tensach}}">
                   </div>
                   <div class="form-group">
                     <label for="exampleTacgia">Tác Giả</label>
-                    <input type="text" class="form-control" id="exampleInputTacgia" placeholder="Tác giả" name="tacgia" value="{{$dausach->tacgia}}">
+                    <input type="text" class="form-control" id="exampleInputTacgia" placeholder="Tác giả" name="tacgia" value="{{$dausachs->tacgia}}">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Tên loại</label>
@@ -63,19 +63,19 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleDanhso">Nhà Xuất Bản</label>
-                    <input type="text" class="form-control" id="nhaxuatban" placeholder="Nhà xuất bản" name="nhaxuatban" value="{{$dausach->nhaxuatban}}">
+                    <input type="text" class="form-control" id="nhaxuatban" placeholder="Nhà xuất bản" name="nhaxuatban" value="{{$dausachs->nhaxuatban}}">
                   </div>
                   <div class="form-group">
                     <label for="exampleNgaysinh">Năm Xuất Bản</label>
-                    <input type="text" class="form-control" id="namxuatban" placeholder="Năm xuất bản" name="namxuatban" value="{{$dausach->namxuatban}}">
+                    <input type="text" class="form-control" id="namxuatban" placeholder="Năm xuất bản" name="namxuatban" value="{{$dausachs->namxuatban}}">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputGioitinh">Số Lượng</label>
-                    <input type="text" class="form-control" id="soluong" placeholder="Số Lượng" name="soluong" value="{{$dausach->soluong}}">
+                    <input type="text" class="form-control" id="soluong" placeholder="Số Lượng" name="soluong" value="{{$dausachs->soluong}}">
                   </div>
                   <div class="form-group">
                     <label for="exampleNgaykham">Ngôn Ngữ</label>
-                    <input type="text" class="form-control" id="ngongnu" placeholder="Ngôn Ngữ" name="ngongngu" value="{{$dausach->ngonngu}}">
+                    <input type="text" class="form-control" id="ngongnu" placeholder="Ngôn Ngữ" name="ngongngu" value="{{$dausachs->ngonngu}}">
                   </div>
                   <!-- /.card-body -->
                   <div class="card-footer">

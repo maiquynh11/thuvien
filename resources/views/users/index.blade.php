@@ -5,14 +5,14 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-8" >
-            <h1>USERS TABLE</h1>
+            <h1>DANH SÁCH NGƯỜI DÙNG</h1>
           </div>
           <div class="col-sm-2">
-            <a class="btn btn-success" href="{{ route('users.create') }}"> Create New User</a>
+            <a class="btn btn-success" href="{{ route('users.create') }}">Thêm người dùng</a>
           </div>
           <div class="col-sm-2">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{route('users.index')}}">Home</a></li>
+              <li class="breadcrumb-item"><a href="{{route('users.index')}}">Trang chủ</a></li>
               <li class="breadcrumb-item active">users table</li>
             </ol>
           </div>
@@ -28,7 +28,7 @@
     <div class="row" style="background-color:#dcedc8">
           <div class="col-12">
             <div class="card">
-              <div class="card-header">
+              <!-- <div class="card-header">
                 <h3 class="card-title"></h3>
 
                 <div class="card-tools">
@@ -41,10 +41,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
-                <table class="table table-hover text-nowrap">
+                <table class="table table-bordered text-nowrap" style="text-align: center">
                   <thead  style="background-color:#b4a647">
                     <tr>
                       <th>ID</th>
@@ -63,7 +63,7 @@
                       <td>{{$datas->hoten}}</td>
                       <td>{{$datas->email}}</td>
                       <td>{{$datas->mathuthu}}</td>
-                      <td><img src="{{$datas->avatar}}" width="50px" class="img-circle"></td>
+                      <td><img src="{{$datas->avatar}}" width="50px" height="50px" class="img-circle"></td>
                       <td>
                         @if(!empty($datas->getRoleNames()))
                             @foreach($datas->getRoleNames() as $v)

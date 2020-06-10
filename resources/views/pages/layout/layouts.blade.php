@@ -33,9 +33,9 @@
       color: black;
     }
     .main-sidebar {
-     background: #00695c;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #00695c, #003d33);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #00695c, #003d33); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: black;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, black, #00251a);
+      background: linear-gradient(to left, black, #00251a);
 
     }
     </style>

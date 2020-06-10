@@ -3,12 +3,12 @@
 @section('content')
 <div class="row" style="background-color:#dcedc8">
         <div class="col-sm-8 mt-1" >
-            <h2>Role Management</h2>
+            <h2>Quyền</h2>
         </div>
         {{-- <div class="pull-right"> --}}
         <div class="col-sm-4 mt-1">
         @can('role-create')
-            <a class="btn btn-success" href="{{ route('roles.create') }}"> Create New Role</a>
+            <a class="btn btn-success" href="{{ route('roles.create') }}">Thêm quyền</a>
             @endcan
         </div>
 </div>

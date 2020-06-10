@@ -26,23 +26,21 @@
     </div>
     @endif
     <div class="row" style="background-color:#dcedc8">
-          <div class="col-12">
+      <div class="col-12">
+        <!-- <div class="card-tools">
+          <div class="input-group input-group-sm" style="width: 150px;" style="background-color:#e0e0e0">
+            <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+            <div class="input-group-append">
+              <button class="btn btn-navbar" type="submit" style="background-color:#e0e0e0">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div> -->
+          <!-- /.card-header -->
+        <div class="row">
+         <div class="col-12">
             <div class="card">
-              <div class="card-header">
-                <h3 class="card-title"></h3>
-
-                <div class="card-tools">
-                  <div class="input-group input-group-sm" style="width: 150px;" style="background-color:#e0e0e0">
-                    <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-                    <div class="input-group-append">
-                      <button class="btn btn-navbar" type="submit" style="background-color:#e0e0e0">
-                        <i class="fas fa-search"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
                 <table class="table table-hover text-nowrap">
                   <thead  style="background-color:#b4a647">
@@ -72,10 +70,12 @@
                 </table>
                 {!! $loaisachs->links()!!}
               </div>
-              <!-- /.card-body -->
             </div>
-            <!-- /.card -->
-          </div>
+         </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
     </div>
 
 @endsection

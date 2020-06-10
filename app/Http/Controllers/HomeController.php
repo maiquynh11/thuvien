@@ -60,4 +60,18 @@ class HomeController extends Controller
         $profile->save();
         return redirect()->back()->with('success', 'update successfully');
     }
+    public function search() {
+        return view('pages.patials.header');
+    }
+    public function searchFullText(Request $request)
+  {
+      if ($request->search != '') {
+          $data = User::FullTextSearch('id', $request->search)->get();
+          foreach ($data as $key => $value) {
+              echo $value->id;
+              echo '<br>'; // mình viết vầy cho nhanh các bạn tùy chỉnh cho đẹp nhé
+          }
+      }
+      // return view('search', $data); thay vì foreach như mình bạn có thể ném cái data vào 1 cái view nào đấy nhìn cho đẹp
+  } 
 }
